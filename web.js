@@ -1,7 +1,6 @@
 var express = require('express');
 
-//var app = express.createServer(express.logger());
-var app = express();
+var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   response.send('Hello World2!');
