@@ -3,13 +3,13 @@ var fs = require('fs');
 
 var index = fs.readFileSync("index.html");
 var buffer = new Buffer(256);
-buffer.write(index, "utf-8");
+buffer.write(index, "utf8");
 
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   //response.send('Hello World2!');
-  respone.send(buffer.toString("utf-8", 0, index));
+  respone.send(buffer.toString("utf8", 0, index));
 });
 
 var port = process.env.PORT || 5000;
