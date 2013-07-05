@@ -2,7 +2,7 @@ var express = require('express');
 var fs = require('fs');
 
 var file = fs.readFileSync("index.html", "utf8"); //second parameter converts file read to string
-var buffer = new Buffer();
+var buffer = new Buffer(256);
 var len = buffer.write(file, 0); //calculates the length of the input and writes to buffer
 
 var app = express.createServer(express.logger());
