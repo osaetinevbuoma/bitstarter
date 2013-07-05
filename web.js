@@ -9,8 +9,7 @@ var len = buffer.write(file, 0); //calculates the length of the input and writes
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  //response.send(buffer.toString("utf8", 0, len)); //converts the buffer to string
-  response.send(buffer.toString("utf8"));
+  response.send(buffer.toString("utf8", 0, len)); //converts the buffer to string
 });
 
 var port = process.env.PORT || 5000;
